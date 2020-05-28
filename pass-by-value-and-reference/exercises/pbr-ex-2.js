@@ -1,3 +1,9 @@
+/*
+  Create a function to perform shallow object copies.
+  Shallow copy means that only primitives of the source are copied,
+  but any object properties still retain their original object references.
+*/
+
 const a = {
   foo: "bar",
   x: 4,

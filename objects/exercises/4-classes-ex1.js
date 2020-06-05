@@ -18,33 +18,27 @@
   Sorry, no more bananas remaining!
 */
 
-class Food {
-  constructor(type, qty) {
-    this.type = type;
-    this.qty = qty;
+/* Example of a Car class */
+class Car {
+  constructor(brand, registration)
+  {
+    this.brand = brand;
+    this.registration = registration;
+    this.speed = 0;
   }
 
-  whatIsThis() {
-    console.log(this.type);
+  increaseSpeed()
+  {
+    this.speed += 5;
   }
 
-  eatOne() {
-    if(this.qty > 0)
-    {
-      this.qty--;
-      console.log('Slurp! One ' + this.type.toLowerCase() + ' eaten. ' + this.qty + ' remaining');
-    }
-    else{
-      console.log('Sorry, no more ' + this.type.toLowerCase() + 's remaining!');
-    }
+  displaySpeed()
+  {
+    console.log(this.registration + ", speed " + this.speed);
   }
 }
 
-let banana = new Food('Banana', 4);
-banana.whatIsThis();
-banana.eatOne();
-banana.eatOne();
-banana.eatOne();
-banana.eatOne();
-banana.eatOne();
-
+let audi = new Car("audi", "abc-123");
+audi.displaySpeed();
+audi.increaseSpeed();
+audi.displaySpeed();

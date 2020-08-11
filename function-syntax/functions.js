@@ -18,6 +18,7 @@ let test = [
 ];
 
 let result = test.map(function(element) {
+  console.log("test");
   return element.a + element.b;
 });
 console.log(result);

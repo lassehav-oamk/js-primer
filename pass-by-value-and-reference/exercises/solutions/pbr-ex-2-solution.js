@@ -1,35 +1,19 @@
 /*
-  Create a function to perform shallow object copies.
-  Shallow copy means that only primitives of the source are copied,
-  but any object properties still retain their original object references.
+  Create a function, which will accept one parameter, a reference to an object, calculate the sum of the parameters
+  object properties foo and bar, add a new property result to the object received as parameter.
+  Call the function and see how the object given as parameter can be modified inside a function.
 */
 
-const a = {
-  foo: "bar",
-  x: 4,
-  y: 8,
-  z: 13.5
+let a = {
+  foo: 1,
+  bar: 2
 }
 
-/* This function should make a shallow copy/clone of the source object.
-   Shallow copy means that only primitives of the source are copied, but any object properties
-   still retain their original object references. */
-function shallowCopy(source)
+function exercise(p)
 {
-  /* Solution with spread operator
-     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-  */
-  //return {...source};
-
-  /* Solution with object assign
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-  */
-  return Object.assign({}, source);
+  // your code here
+  p.result = p.foo + p.bar;
 }
 
-
-let copiedObject = shallowCopy(a);
-copiedObject.foo = "This is not the original object";
-console.log(a);
-console.log(copiedObject);
-console.log(a==copiedObject);
+exercise(a);
+console.log(a.result); // output should be the sum of foo and bar properties of the a object

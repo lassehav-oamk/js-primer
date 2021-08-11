@@ -1,18 +1,19 @@
 /*
-  Create a function, which will accept one parameter, a reference to an object, calculate the sum of the parameters
-  object properties foo and bar, add a new property result to the object received as parameter.
-  Call the function and see how the object given as parameter can be modified inside a function.
-*/
+  Write a function called square, which takes one parameter, multiplies
+  the parameter with itself and then returns the value.
+  Notice that the parameter given to the function does not change. */
 
-let a = {
-  foo: 1,
-  bar: 2
+// Implement the function here
+function square(x) {
+  return x * x;
 }
 
-function exercise(p)
-{
-  p.result = p.foo + p.bar;
-}
 
-exercise(a);
-console.log(a.result); // output should be the sum of foo and bar properties of the a object
+// Testing the function
+let a = 5;
+
+
+let resultA = square(a);
+console.log('value of a after square(a) execution: ' + a);
+console.log('resultA value is ' + resultA);
+

@@ -1,4 +1,4 @@
-const example = require('./demoExport');
+const example = require('./sources/4-node-export');
 
 
 console.log(example);
